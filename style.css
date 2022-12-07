@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  height: 100%;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar span {
+  background-color: blue;
+  width: 80%;
+  height: 80px;
+}
+.main-content {
+  flex: 1;
+  position: relative;
+}
+
+.main-content-top {
+  background-color: aquamarine;
+  height: 10%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.main-content-top span {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: block;
+  background-color: green;
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 100%;
+}
+
+.main-content-middle_content {
+  background-color: red;
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-content-middle_content input {
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: black;
+  margin-bottom: 30px;
+}
+.main-content-middle_content input::placeholder {
+  color: black;
+}
+.main-content-middle_content .submit-btn {
+  background-color: blue;
+  color: white;
+  width: auto;
+  padding: 3.5px 5.5px;
+  border: none;
+  cursor: pointer;
+}
+.main-content .avatar-icon {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content .avatar-icon {
+    right: unset;
+    left: 15px;
+  }
+  .main-content-top {
+    justify-content: end;
+  }
+  .main-content-middle {
+    align-items: start;
+  }
+  .main-content-middle_content {
+    width: 100%;
+    height: 25%;
+  }
+  .main-content-top span {
+    margin-left: 0;
+    margin-right: 25px;
+  }
+}
