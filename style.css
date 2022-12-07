@@ -75,6 +75,7 @@ main {
 }
 .main-content-middle_content input::placeholder {
   color: black;
+  padding-left: 15px;
 }
 .main-content-middle_content .submit-btn {
   background-color: blue;
